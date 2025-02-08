@@ -120,7 +120,7 @@ function render (cb, templateStr, jsonView) {
 }
 
 function toStdout (cb, str) {
-  if (outputArg) {
+  if (outputArg && outputArg != "-") {
     cb(fs.writeFileSync(outputArg, str));
   } else {
     cb(process.stdout.write(str));
