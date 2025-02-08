@@ -1,5 +1,5 @@
 {
-  "name": "mustache",
+  "name": "@jbroll/mustache",
   "version": "4.2.0",
   "description": "Logic-less {{mustache}} templates with JavaScript",
   "author": "mustache.js Authors <http://github.com/janl/mustache.js>",
@@ -47,15 +47,16 @@
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "chai": "^3.4.0",
-    "eslint": "^6.5.1",
+    "chai": "^4.5.0",
+    "eslint": "^9.20.0",
     "esm": "^3.2.25",
-    "jshint": "^2.9.5",
-    "mocha": "^3.0.2",
-    "puppeteer": "^2.0.0",
-    "rollup": "^1.26.3",
-    "uglify-js": "^3.4.6",
-    "zuul": "^3.11.0",
+    "jshint": "^2.13.6",
+    "mocha": "^11.1.0",
+    "npm-check-updates": "^17.1.14",
+    "puppeteer": "^24.2.0",
+    "rollup": "^4.34.6",
+    "uglify-js": "^3.19.3",
+    "zuul": "^3.12.0",
     "zuul-ngrok": "nolanlawson/zuul-ngrok#patch-1"
   },
   "greenkeeper": {
