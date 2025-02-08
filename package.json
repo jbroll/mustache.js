@@ -1,6 +1,6 @@
 {
   "name": "@jbroll/mustache",
-  "version": "4.2.1",
+  "version": "4.2.2",
   "description": "Logic-less {{mustache}} templates with JavaScript",
   "author": "mustache.js Authors <http://github.com/jbroll/mustache.js>",
   "homepage": "https://github.com/jbroll/mustache.js",
