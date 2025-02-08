@@ -9,7 +9,25 @@ var partials = {};
 
 var partialsPaths = [];
 var partialArgIndex = -1;
+var partialsDirIndex = -1;
 
+// Handle -P directory option
+while ((partialsDirIndex = process.argv.indexOf('-P')) > -1) {
+  const dirPath = process.argv.splice(partialsDirIndex, 2)[1];
+  try {
+    const files = fs.readdirSync(dirPath);
+    files.forEach(file => {
+      if (file.endsWith('.mustache')) {
+        partialsPaths.push(path.join(dirPath, file));
+      }
+    });
+  } catch (err) {
+    console.error('Error reading partials directory:', err.message);
+    process.exit(1);
+  }
+}
+
+// Handle existing -p option
 while ((partialArgIndex = process.argv.indexOf('-p')) > -1) {
   partialsPaths.push(process.argv.splice(partialArgIndex, 2)[1]);
 }
@@ -23,7 +41,7 @@ if (hasVersionArg()) {
 }
 
 if (!templateArg || !viewArg) {
-  console.error('Syntax: mustache <view> <template> [output]');
+  console.error('Syntax: mustache [-p partial ...] [-P partials_dir ...] <view> <template> [output]');
   process.exit(1);
 }
 
