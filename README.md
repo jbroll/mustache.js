@@ -18,7 +18,8 @@ You can use mustache.js to render mustache templates anywhere you can use JavaSc
 
 mustache.js ships with support for the [CommonJS](http://www.commonjs.org/) module API, the [Asynchronous Module Definition](https://github.com/amdjs/amdjs-api/wiki/AMD) API (AMD) and [ECMAScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules).
 
-In addition to being a package to be used programmatically, you can use it as a [command line tool](#command-line-tool).
+In addition to being a package to be used programmatically, you can use it as a
+[command line tool](#command-line-tool).
 
 And this will be your templates after you use Mustache:
 
@@ -513,6 +514,8 @@ If your templates use partials you should pass paths to partials using `-p` flag
 ```bash
 $ mustache -p path/to/partial1.mustache -p path/to/partial2.mustache dataView.json myTemplate.mustache
 ```
+
+Or a directory path with `-P`.  Partials here should be suffixed with .mustache.
 
 ## Plugins for JavaScript Libraries
 
